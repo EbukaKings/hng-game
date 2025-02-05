@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin-left: auto;
+        margin-right: auto;
+}
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.random-colour {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border: 2px solid black;
+}
+
+.color-mixed-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 20px 0;
+    column-gap: 10px;
+}
+
+.color-mixed1, .color-mixed2, .color-mixed3, .color-mixed4, .color-mixed5, .color-mixed6 {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border: px solid black;
+    border-radius: 10px;
+    
+    
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+/* Animation for fading out */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Animation for fade-in (for showing result) */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation for celebration when the player wins */
+@keyframes celebration {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation styles */
+.result {
+    animation-duration: 2s;
+    animation-fill-mode: forwards; 
+}
+
+.fade-out {
+    animation: fadeOut 2s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 2s forwards;
+}
+
+.celebrate {
+    animation: celebration 1s forwards;
+}
+
+
+@media (max-width: 768px) {
+    .guess {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .color-mixed-container {
+        width: 90%; /* Slightly increase width for smaller screens */
+        justify-content: center; /* Center items in the container */
+        margin-left: auto;
+        
+    }
+    .random-colour {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .color-mixed-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        grid-row: 20px;
+    }
+    .game-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid gray;
+        padding-top: 30%;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 3px;
+        padding-bottom: 30%;
+    }
+    
+}
