@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="game-container">
-        <p>Guess the correct color!</p>
+        <p data-testid="gameInstructions">Guess the correct color!</p>
         <div class="random-colour" data-testid="colorBox"></div>
         <div class="color-mixed-container" data-testid="colorOption">
             <div class="color-mixed1" style="background-color: blue;"></div>
@@ -18,9 +18,7 @@
             <div class="color-mixed5" style="background-color: purple;"></div>
             <div class="color-mixed6" style="background-color: black;"></div>
         </div>
-        <p data-testid="gameInstructions">
-            Guess the correct color!
-        </p>
+        
         <p class="result" data-testid="gameStatus"></p> 
         <div class="score" data-testid="score">Score: 0</div> 
         <button data-testid="newGameButton">New Game</button>
